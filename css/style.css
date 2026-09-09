@@ -1,0 +1,570 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', Georgia, serif;
+  line-height: 1.2;
+}
+
+a { text-decoration: none; }
+
+/* ===== Header ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #1B4332;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-dice {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-dice i {
+  position: absolute;
+  font-size: 1.5rem;
+}
+
+.logo-dice i:first-child {
+  color: #52B788;
+  transform: translate(-5px, 3px) rotate(-15deg);
+}
+
+.logo-dice i:last-child {
+  color: #D8F3DC;
+  transform: translate(5px, -3px) rotate(15deg);
+}
+
+.logo-text {
+  color: #fff;
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+}
+
+nav.header-nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+nav.header-nav a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav.header-nav a:hover {
+  color: #52B788;
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: url('assets/img/fundo_hero.png') center / cover fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 1rem;
+  max-width: 700px;
+}
+
+.hero-box {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(82, 183, 136, 0.3);
+}
+
+.hero-box .hero-icon {
+  color: #52B788;
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-box h1 {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.hero-box .hero-sub {
+  color: #D8F3DC;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 5rem 1.5rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Benefits ===== */
+.benefits {
+  background: #fff;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #fff;
+  border: 1px solid #D8F3DC;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #52B788;
+  transform: translateY(-4px);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: #D8F3DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon i {
+  color: #2D6A4F;
+  font-size: 1.875rem;
+}
+
+.benefit-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1B4332;
+  margin-bottom: 0.75rem;
+}
+
+.benefit-card p {
+  color: #6b7280;
+}
+
+/* ===== Game Styles ===== */
+.game-styles {
+  background: #FFF8E7;
+}
+
+.styles-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.style-tag {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: #2D6A4F;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.style-tag:hover {
+  background: #40916C;
+  transform: scale(1.05);
+}
+
+.style-tag i {
+  color: #D8F3DC;
+  margin-right: 0.5rem;
+}
+
+/* ===== Testimonials ===== */
+.testimonials {
+  background: #fff;
+}
+
+.testimonial {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 4px solid #52B788;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial .quote-icon {
+  color: #52B788;
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial blockquote {
+  font-size: 1.25rem;
+  color: #4b5563;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.testimonial .author {
+  color: #2D6A4F;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.testimonial-nav button {
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #2D6A4F;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.testimonial-nav button:hover {
+  background: #40916C;
+}
+
+/* ===== Order Form ===== */
+.order-form {
+  background: #FFF8E7;
+}
+
+.form-container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  color: #2D6A4F;
+  font-weight: 600;
+  margin-bottom: 0.375rem;
+  font-size: 0.875rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s;
+  font-family: inherit;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #40916C;
+  box-shadow: 0 0 0 2px rgba(82, 183, 136, 0.3);
+}
+
+.payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.payment-options input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #2D6A4F;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #2D6A4F;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: inherit;
+}
+
+.submit-btn:hover {
+  background: #40916C;
+}
+
+.submit-btn i {
+  margin-right: 0.5rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1A120B;
+  color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social span {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.footer-social span:hover {
+  background: #2D6A4F;
+}
+
+.footer-social i {
+  font-size: 1.25rem;
+}
+
+.footer-name {
+  color: #52B788;
+  font-weight: 600;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+}
+
+/* ===== Obrigado Page ===== */
+.obrigado-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1B4332;
+  padding: 1rem;
+  text-align: center;
+}
+
+.obrigado-box {
+  max-width: 500px;
+}
+
+.obrigado-box i {
+  color: #52B788;
+  font-size: 3.75rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.obrigado-box h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.obrigado-box p {
+  color: #D8F3DC;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.obrigado-box a {
+  display: inline-block;
+  background: #40916C;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.obrigado-box a:hover {
+  background: #52B788;
+}
+
+.obrigado-box a i {
+  margin-right: 0.5rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  nav.header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-box h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .testimonial blockquote {
+    font-size: 1.1rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+}
