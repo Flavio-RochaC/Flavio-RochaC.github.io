@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taberna do Goblin — Ludoteca</title>
+
+  <!-- Google Fonts: Cinzel + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- Estilos principais -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- JavaScript -->
+  <script src="js/scripts.js" defer></script>
+
+</head>
+<body>
+
+  <!-- ===== Cabeçalho Fixo ===== -->
+  <header>
+    <div class="header-inner">
+      <a href="#inicio" class="logo">
+        <div class="logo-dice">
+          <i class="fas fa-dice-five"></i>
+          <i class="fas fa-dice-two"></i>
+        </div>
+        <span class="logo-text">Taberna do Goblin</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#inicio">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#estilos">Estilos de Jogos</a>
+        <a href="#depoimento">Depoimento</a>
+        <a href="#pedido">Peça já</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero (Parallax) ===== -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-box">
+        <i class="fas fa-dice-d20 hero-icon"></i>
+        <h1>Onde toda partida vira uma grande aventura!</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Benefícios ===== -->
+  <section id="beneficios" class="benefits">
+    <h2 class="section-title">Por que escolher nossa Ludoteca?</h2>
+    <p class="section-subtitle">Tudo o que você precisa para uma jornada inesquecível</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-dice"></i></div>
+        <h3>Variedade de Jogos</h3>
+        <p>Mais de 200 títulos entre board games, card games e RPGs para todos os gostos e idades.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-dragon"></i></div>
+        <h3>Experiência Imersiva</h3>
+        <p>Mergulhe em mundos fantásticos com narrativas envolventes e mecânicas únicas.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><i class="fas fa-location-dot"></i></div>
+        <h3>Diverte-se onde quiser</h3>
+        <p>Alugue e leve a diversão para casa, para o parque ou onde preferir jogar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Estilos de Jogos ===== -->
+  <section id="estilos" class="game-styles">
+    <h2 class="section-title">Estilos de Jogos</h2>
+    <p class="section-subtitle">Encontre o tipo perfeito para o seu grupo</p>
+    <div class="styles-tags">
+      <button class="style-tag"><i class="fas fa-dice-d20"></i>Party Games</button>
+      <button class="style-tag"><i class="fas fa-dice-d20"></i>Eurogame</button>
+      <button class="style-tag"><i class="fas fa-dice-d20"></i>Ameritrash</button>
+      <button class="style-tag"><i class="fas fa-dice-d20"></i>Dungeon Crawler</button>
+      <button class="style-tag"><i class="fas fa-dice-d20"></i>Sistemas de RPG</button>
+    </div>
+  </section>
+
+  <!-- ===== Depoimento ===== -->
+  <section id="depoimento" class="testimonials">
+    <h2 class="section-title">O que nossos clientes dizem</h2>
+
+    <div class="testimonial">
+
+      <div class="testimonial-photo">
+        <img id="testimonial-photo"/>
+      </div>
+      
+      <blockquote id="testimonial-text">
+      </blockquote>
+
+      <div class="testimonial-nav">
+        <button id="btn-anterior">
+          <i class="fas fa-chevron-left"></i> Anterior
+        </button>
+
+        <button id="btn-proximo">
+          Próximo <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Formulário de Pedido ===== -->
+  <section id="pedido" class="order-form">
+    <h2 class="section-title">Peça já o seu jogo!</h2>
+    <p class="section-subtitle">Faça sua reserva e viva uma grande aventura</p>
+    <div class="form-container">
+      <form class="form-card" id="formPedido" action="obrigado.html" method="get">
+
+        <!-- ===== Nome ===== -->
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required/>
+        </div>
+
+        <!-- ===== Telefone ===== -->
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" title="Digite um telefone válido. Exemplo: (45) 99999-9999" required />
+        </div>
+
+        <!-- ===== Endereco ===== -->
+        <div class="form-group">
+          <label for="endereco">Endereço</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Seu endereço" required />
+        </div>
+
+        <!-- ===== Tipo da Reserva ===== -->
+        <div class="form-group">
+          <label>Tipo Reserva</label>
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="tipoReserva" value="local" required/>
+              Local
+            </label>
+            <label>
+              <input type="radio" name="tipoReserva" value="retirada"/>
+              Retirada
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== Data ===== -->
+        <div class="form-group">
+          <label for="dataAgendamento">
+            Data agendamento
+          </label>
+          <input type="date" id="dataAgendamento" name="dataAgendamento" required/>
+        </div>
+        
+        <!-- ===== Reserva Local - Selecao de Sala ===== -->
+        <div class="form-group conditional-field" id="campoSala" style="display: none;">
+          <label for="sala">Selecionar Sala</label>
+          <select id="sala" name="sala"> 
+            <option value=""> Escolha uma sala </option>
+            <option value="RPG_01"> RPG_01 </option>
+            <option value="RPG_02"> RPG_02 </option>
+            <option value="BoardGames_01"> BoardGames_01 </option>
+            <option value="BoardGames_02"> BoardGames_02 </option>
+            <option value="BoardGames_03"> BoardGames_03 </option>
+            <option value="BoardGames_04"> BoardGames_04 </option>
+          </select>
+        </div>
+
+        <!-- ===== Retirada - Selecao de Jogos ===== -->
+        <div class="form-group conditional-field" id="campoJogos" style="display: none;">
+          <label for="jogo">
+            Seleção de Jogos
+          </label>
+          <select id="jogo" name="jogo">
+            <option value=""> Escolha um jogo </option>
+            <option value="Zombicide"> Zombicide </option>
+            <option value="Azul"> Azul </option>
+            <option value="Coup"> Coup </option>
+            <option value="Resistence"> Resistence </option>
+            <option value="Wother Deap"> Wother Deap </option>
+            <option value="Carcasome"> Carcasome </option>
+          </select>
+        </div>
+
+        <!-- ===== Pagamento ===== -->
+        <div class="form-group">
+          <label>Pagamento</label>
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="pagamento" value="local" required/>
+              No Local
+            </label>
+            <label>
+              <input type="radio" name="pagamento" value="site"/>
+              Pelo Site
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== Pagamento pelo Site ===== -->
+        <div class="form-group conditional-field" id="campoPagamentoSite" style="display: none;">
+          <label>Tipo Pagamento</label>
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="tipoPagamento" value="boleto"/>
+              Boleto
+            </label>
+            <label>
+              <input type="radio" name="tipoPagamento" value="cartao"/>
+              Cartão de Crédito
+            </label>
+            <label>
+              <input type="radio" name="tipoPagamento" value="pix"/>
+              Código PIX
+            </label>
+          </div>
+        </div>
+
+        <!-- ===== Botão ===== -->
+        <button type="submit" class="submit-btn">
+          <i class="fas fa-paper-plane"></i>
+          Enviar Pedido
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Rodapé ===== -->
+  <footer>
+    <div class="footer-social">
+      <span aria-label="Instagram"><i class="fab fa-instagram"></i></span>
+      <span aria-label="Facebook"><i class="fab fa-facebook"></i></span>
+      <span aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></span>
+    </div>
+    <p class="footer-name">Flávio Rocha Cezarino</p>
+    <p class="footer-copy">© 2025 Taberna do Goblin — Ludoteca. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
