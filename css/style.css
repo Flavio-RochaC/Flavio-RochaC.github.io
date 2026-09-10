@@ -106,7 +106,7 @@ nav.header-nav a:hover {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: url('assets/img/fundo_hero.png') center / cover fixed;
+  background: url('../assets/img/fundo_hero.png') center / cover fixed;
 }
 
 .hero-overlay {
