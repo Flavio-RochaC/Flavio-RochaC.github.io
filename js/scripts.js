@@ -157,7 +157,7 @@ formulario.addEventListener("submit", function (event) {
   const telefone = document.getElementById("telefone");
 
   const telefoneValido =
-    /^(?:[0-9]{2} [0-9]{8,9}|[0-9]{10,11})$/;
+    /^\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}|[0-9]{10,11}$/;
   if (!telefoneValido.test(telefone.value)) {
     event.preventDefault();
     alert(
